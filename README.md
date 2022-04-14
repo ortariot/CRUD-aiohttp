@@ -1,31 +1,30 @@
-# Домашнее задание к лекции «AIOHHTP»
+# Домашнее задание к лекции «Aiohttp»
 
 ## Задание 1
 
-* Реализовано  REST API (backend) для сайта объявлений на Flask. 
+* Реализовано  REST API (backend) для сайта объявлений на Flask.
 * Реализованы методы создания/удаления/редактирования объявления.
-
-## Задание 2
-
 * Добавлена система прав доступа
+* Добавлена система миграций alembic
+* Реализовано развёртывание docer-контейнера
 
-### Установка
 
-``` bash
-pip install -r requirements.txt
+
+
+
+сборка:
+
+```bash
+ docker-compose build
 ```
 
-### Инициализация базы данных
+запук:
 
-``` bash
-flask db init
+```bash:
+ docker-compose up -d
 ```
 
-### Миграции
 
-``` bash
-flask db migrate -m "migration-1"
-flask db upgrade
-```
 
-Примеры http-запросов в файле [requests-examples.http](/requests-examples.http)
+Примеры http-запросов в файле [requests-examples.http](/app/requests-examples.http)
+
